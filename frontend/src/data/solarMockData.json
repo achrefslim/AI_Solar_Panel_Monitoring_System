@@ -1,0 +1,80 @@
+[
+  {
+    "courant": "6.4 A",
+    "tension": "38.2 V",
+    "puissance": "244.4 W",
+    "energie": "0.07 Wh",
+    "solarIrradiance": "820 W/m²",
+    "solarProduction": "310 W",
+    "efficiency": "22.4 %",
+    "elevation": "48.3 °",
+    "humidity": "42 %",
+    "cloudCover": "12 %",
+    "windSpeed": "3.2 m/s"
+  },
+  {
+    "courant": "4.9 A",
+    "tension": "41.1 V",
+    "puissance": "201.4 W",
+    "energie": "0.06 Wh",
+    "solarIrradiance": "650 W/m²",
+    "solarProduction": "240 W",
+    "efficiency": "19.8 %",
+    "elevation": "35.1 °",
+    "humidity": "55 %",
+    "cloudCover": "28 %",
+    "windSpeed": "2.7 m/s"
+  },
+  {
+    "courant": "7.8 A",
+    "tension": "39.5 V",
+    "puissance": "308.1 W",
+    "energie": "0.08 Wh",
+    "solarIrradiance": "940 W/m²",
+    "solarProduction": "380 W",
+    "efficiency": "24.1 %",
+    "elevation": "52.7 °",
+    "humidity": "38 %",
+    "cloudCover": "6 %",
+    "windSpeed": "4.1 m/s"
+  },
+  {
+    "courant": "3.3 A",
+    "tension": "30.8 V",
+    "puissance": "101.6 W",
+    "energie": "0.03 Wh",
+    "solarIrradiance": "420 W/m²",
+    "solarProduction": "120 W",
+    "efficiency": "17.2 %",
+    "elevation": "22.4 °",
+    "humidity": "61 %",
+    "cloudCover": "47 %",
+    "windSpeed": "5.8 m/s"
+  },
+  {
+    "courant": "5.6 A",
+    "tension": "44.2 V",
+    "puissance": "247.5 W",
+    "energie": "0.07 Wh",
+    "solarIrradiance": "780 W/m²",
+    "solarProduction": "300 W",
+    "efficiency": "21.1 %",
+    "elevation": "40.9 °",
+    "humidity": "50 %",
+    "cloudCover": "20 %",
+    "windSpeed": "3.5 m/s"
+  },
+  {
+    "courant": "2.8 A",
+    "tension": "32.5 V",
+    "puissance": "91.0 W",
+    "energie": "0.02 Wh",
+    "solarIrradiance": "350 W/m²",
+    "solarProduction": "100 W",
+    "efficiency": "15.3 %",
+    "elevation": "18.6 °",
+    "humidity": "72 %",
+    "cloudCover": "64 %",
+    "windSpeed": "6.9 m/s"
+  }
+]

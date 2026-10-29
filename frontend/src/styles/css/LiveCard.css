@@ -1,0 +1,104 @@
+.measure {
+  background: linear-gradient(135deg, rgba(0, 20, 40, 0.5) 0%, rgba(0, 10, 20, 0.7) 100%);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+.measure::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #00f2fe;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.measure:hover::before {
+  transform: scaleX(1);
+}
+.measure:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 242, 254, 0.3);
+  background: linear-gradient(135deg, rgba(0, 20, 40, 0.6), rgba(0, 10, 20, 0.8));
+}
+.measure .label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(230, 247, 255, 0.6);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.measure .value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #00f2fe;
+  text-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+  font-family: "Courier New", monospace;
+}
+.measure.courant {
+  border-left: 4px solid #ff2e63;
+  padding-left: 14px;
+}
+.measure.courant::before {
+  background: #ff2e63;
+}
+.measure.courant .value {
+  color: #ff2e63;
+  text-shadow: 0 0 15px rgba(255, 46, 99, 0.4);
+}
+.measure.tension {
+  border-left: 4px solid #00f2fe;
+  padding-left: 14px;
+}
+.measure.tension::before {
+  background: #00f2fe;
+}
+.measure.tension .value {
+  color: #00f2fe;
+  text-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
+.measure.puissance {
+  border-left: 4px solid #00f5a0;
+  padding-left: 14px;
+}
+.measure.puissance::before {
+  background: #00f5a0;
+}
+.measure.puissance .value {
+  color: #00f5a0;
+  text-shadow: 0 0 15px rgba(0, 245, 160, 0.4);
+}
+.measure.lumiere {
+  border-left: 4px solid #ffbd69;
+  padding-left: 14px;
+}
+.measure.lumiere::before {
+  background: #ffbd69;
+}
+.measure.lumiere .value {
+  color: #ffbd69;
+  text-shadow: 0 0 15px rgba(255, 189, 105, 0.4);
+}
+.measure.energie {
+  border-left: 4px solid #9d50ff;
+  padding-left: 14px;
+}
+.measure.energie::before {
+  background: #9d50ff;
+}
+.measure.energie .value {
+  color: #9d50ff;
+  text-shadow: 0 0 15px rgba(157, 80, 255, 0.4);
+}

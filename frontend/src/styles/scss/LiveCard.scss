@@ -1,0 +1,139 @@
+$accent: #00f2fe;
+$accent-glow: rgba(0, 242, 254, 0.4);
+$glass: rgba(0, 20, 40, 0.5);
+$panel: rgba(0, 10, 20, 0.7);
+
+$danger: #ff2e63;
+$success: #00f5a0;
+$warning: #ffbd69;
+$energy-blue: #00f2fe;
+$energy-green: #00f5a0;
+$energy-purple: #9d50ff;
+
+.measure {
+  background: linear-gradient(135deg, $glass 0%, $panel 100%);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0; right: 0;
+    height: 2px;
+    background: $accent;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+
+  &:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow:
+      0 15px 40px rgba(0,0,0,0.6),
+      0 0 0 1px rgba($accent, 0.3);
+    background: linear-gradient(135deg, rgba(0,20,40,0.6), rgba(0,10,20,0.8));
+  }
+
+  .label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(230,247,255,0.6);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .value {
+    font-size: 24px;
+    font-weight: 700;
+    color: $energy-blue;
+    text-shadow: 0 0 20px $accent-glow;
+    font-family: "Courier New", monospace;
+  }
+  
+  &.courant {
+    border-left: 4px solid $danger;
+    padding-left: 14px;
+
+    &::before {
+      background: $danger;
+    }
+
+    .value {
+      color: $danger;
+      text-shadow: 0 0 15px rgba($danger, 0.4);
+    }
+  }
+  
+  &.tension {
+    border-left: 4px solid $energy-blue;
+    padding-left: 14px;
+
+    &::before {
+      background: $energy-blue;
+    }
+
+    .value {
+      color: $energy-blue;
+      text-shadow: 0 0 15px rgba($energy-blue, 0.4);
+    }
+  }
+  
+  &.puissance {
+    border-left: 4px solid $success;
+    padding-left: 14px;
+
+    &::before {
+      background: $success;
+    }
+
+    .value {
+      color: $success;
+      text-shadow: 0 0 15px rgba($success, 0.4);
+    }
+  }
+  
+  &.lumiere {
+    border-left: 4px solid $warning;
+    padding-left: 14px;
+
+    &::before {
+      background: $warning;
+    }
+
+    .value {
+      color: $warning;
+      text-shadow: 0 0 15px rgba($warning, 0.4);
+    }
+  }
+  
+  &.energie {
+    border-left: 4px solid $energy-purple;
+    padding-left: 14px;
+
+    &::before {
+      background: $energy-purple;
+    }
+
+    .value {
+      color: $energy-purple;
+      text-shadow: 0 0 15px rgba($energy-purple, 0.4);
+    }
+  }
+}

@@ -1,0 +1,67 @@
+[
+  { "sender": "bot", "text": "Hello! I'm your Solar Assistant ☀️ How can I help you today?" },
+
+  { "sender": "user", "text": "Show me today's energy production." },
+  { "sender": "bot", "text": "Your system produced 3.42 kWh so far today. This is 12% higher than yesterday." },
+
+  { "sender": "user", "text": "Why is voltage fluctuating?" },
+  { "sender": "bot", "text": "Voltage variations are normal during rapid irradiance changes. Cloud shadows can cause brief dips." },
+
+  { "sender": "user", "text": "What about efficiency right now?" },
+  { "sender": "bot", "text": "Current efficiency is 22.7%. This is within expected operational range for this time of day." },
+
+  { "sender": "user", "text": "Is the system healthy?" },
+  { "sender": "bot", "text": "Yes. All metrics indicate stable operation. No anomalies detected in the last 24 hours." },
+
+  { "sender": "bot", "text": "By the way, sunlight intensity is trending upward. Expect increased production in the next hour." },
+
+  { "sender": "user", "text": "How’s the weather?" },
+  { "sender": "bot", "text": "Currently: Sunny ☀️, 23°C. Cloud cover: 12%. Wind: 2.1 m/s. Conditions are ideal for peak generation." },
+
+  { "sender": "user", "text": "Give me a summary of the last hour." },
+  { "sender": "bot", "text": "In the last hour:\n• Avg power: 421 W\n• Peak power: 563 W\n• Energy gained: 0.54 kWh\n• Efficiency: +2.3% compared to previous hour." },
+
+  { "sender": "user", "text": "Any warnings?" },
+  { "sender": "bot", "text": "⚠️ No current warnings. The inverter temperature peaked slightly but remained within safe limits (41°C)." },
+
+  { "sender": "bot", "text": "I’ve also noticed that your solar elevation angle is increasing. Good production window ahead." },
+
+  { "sender": "user", "text": "What's solar irradiance right now?" },
+  { "sender": "bot", "text": "Solar irradiance is 842 W/m². This level typically yields high power output." },
+
+  { "sender": "user", "text": "Give me a prediction for the next 3 hours." },
+  { "sender": "bot", "text": "Based on irradiance forecast: Expected production ≈ 2.1–2.8 kWh in the next 3 hours." },
+
+  { "sender": "bot", "text": "Tip: If you want more granular data, I can show 5-minute intervals or inverter-side readings." },
+
+  { "sender": "user", "text": "What caused the energy spike earlier?" },
+  { "sender": "bot", "text": "At 10:17 AM, a sudden drop in cloud density increased solar exposure, causing a short 11% spike in power output." },
+
+  { "sender": "user", "text": "Can I compare today with yesterday?" },
+  { "sender": "bot", "text": "Sure. Today’s energy output is 18% higher so far. Yesterday had intermittent cloud coverage between 11 AM and 2 PM." },
+
+  { "sender": "user", "text": "How much light is detected?" },
+  { "sender": "bot", "text": "Light intensity is at 76%. This corresponds well with the irradiance level." },
+
+  { "sender": "user", "text": "What's the current power?" },
+  { "sender": "bot", "text": "You're generating 498 W right now." },
+
+  { "sender": "user", "text": "Give inverter status." },
+  { "sender": "bot", "text": "The inverter is operating normally. No fault codes. Efficiency at DC–AC conversion is 96%." },
+
+  { "sender": "bot", "text": "FYI: Nominal power setting is still at 2500W. You can adjust it if you want optimized projections." },
+
+  { "sender": "user", "text": "Check battery?" },
+  { "sender": "bot", "text": "Your system does not include a battery module. If you'd like to add storage analytics, I can integrate support." },
+
+  { "sender": "user", "text": "What's the sunlight elevation?" },
+  { "sender": "bot", "text": "Solar elevation is currently 37°. Expect maximum elevation at 12:48 PM." },
+
+  { "sender": "user", "text": "Give me a full report." },
+  { "sender": "bot", "text": "Here's your summary:\n\n• Power: 498 W\n• Voltage: 42.1 V\n• Current: 11.8 A\n• Solar Irradiance: 842 W/m²\n• Efficiency: 22.7%\n• Temperature: 23°C\n• Weather: Sunny\n\nEverything looks optimal." },
+
+  { "sender": "bot", "text": "Let me know if you'd like exported data or PDF reports." },
+
+  { "sender": "user", "text": "Thanks!" },
+  { "sender": "bot", "text": "Always happy to help ☀️" }
+]

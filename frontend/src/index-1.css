@@ -1,0 +1,384 @@
+:root{
+  --bg:#050c14;
+  --panel:rgba(0,10,20,0.7);
+  --text:#e6f7ff;
+  --accent:#00f2fe;
+  --accent-glow:rgba(0,242,254,0.4);
+  --muted:rgba(230,247,255,0.6);
+  --danger:#ff2e63;
+  --success:#00f5a0;
+  --warning:#ffbd69;
+  --energy-blue:#00f2fe;
+  --energy-green:#00f5a0;
+  --energy-purple:#9d50ff;
+  --glass:rgba(0,20,40,0.5);
+  --deep-space:#0a1525;
+}
+
+/* ====== ENHANCED AURORA TITLE ====== */
+h1.aurora {
+  font-size: 2.4rem;
+  text-shadow: 0 0 15px rgba(0,0,0,0.9);
+  animation-duration: 10s;
+  opacity: 0.92;
+}
+
+/* Enhanced energy halo */
+h1.aurora::before{
+  content: "";
+  position: absolute;
+  left: -30%;
+  top: -40%;
+  width: 160%;
+  height: 200%;
+  background:
+    radial-gradient(35% 35% at 10% 20%, var(--energy-blue), transparent 15%),
+    radial-gradient(30% 30% at 60% 60%, var(--energy-green), transparent 12%),
+    radial-gradient(25% 25% at 80% 30%, var(--energy-purple), transparent 10%);
+  filter: blur(35px);
+  opacity: 0.8;
+  mix-blend-mode: screen;
+  animation: haloMove 8s linear infinite;
+  pointer-events: none;
+  border-radius: 40%;
+}
+
+/* Energy pulse underline */
+h1.aurora::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--energy-green), var(--energy-blue), var(--energy-purple));
+  filter: blur(8px);
+  opacity: 0.8;
+  transform-origin: left center;
+  animation: energyPulse 2s ease-in-out infinite;
+  pointer-events: none;
+  border-radius: 4px;
+}
+
+/* Enhanced Animations */
+@keyframes auroraShift{
+  0%{ background-position: 0% 50%; }
+  50%{ background-position: 100% 50%; }
+  100%{ background-position: 0% 50%; }
+}
+@keyframes haloMove{
+  0%{ transform: translateX(-5%) translateY(0) rotate(0deg); opacity:0.7; }
+  50%{ transform: translateX(5%) translateY(-8%) rotate(3deg); opacity:0.9; }
+  100%{ transform: translateX(-5%) translateY(0) rotate(0deg); opacity:0.7; }
+}
+@keyframes energyPulse{
+  0%, 100%{ transform: scaleX(0.9); opacity:0.6; }
+  50%{ transform: scaleX(1.1); opacity:1; }
+}
+
+/* ====== ENHANCED PAGE LAYOUT ====== */
+
+
+/* ENHANCED BUTTONS */
+.controls{display:flex; gap:10px; align-items:center;}
+.btn{
+  background: rgba(10, 18, 30, 0.8);
+  border: 1px solid rgba(0,255,255,0.15);
+  color: var(--text);
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0,242,254,0.2), transparent);
+  transition: left 0.5s;
+}
+.btn:hover::before {
+  left: 100%;
+}
+.btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,255,255,0.25);
+  border-color: var(--energy-blue);
+}
+.btn:active{transform:translateY(0px);}
+.btn.secondary{background:transparent; border:1px solid rgba(0,242,254,0.2);}
+.btn.positive{border-color:var(--success);}
+
+/* ENHANCED MEASURE CARDS */
+#measure-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap:15px;
+  margin-bottom:20px;
+}
+.measure{
+  background: linear-gradient(135deg, var(--glass) 0%, var(--panel) 100%);
+  padding:20px;
+  border-radius:16px;
+  box-shadow: 
+    0 8px 32px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  transition: all 0.3s ease;
+  cursor:pointer;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  overflow: hidden;
+}
+.measure::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.measure:hover::before {
+  transform: scaleX(1);
+}
+.measure:hover{
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 
+    0 15px 40px rgba(0,0,0,0.6),
+    0 0 0 1px rgba(0,242,254,0.3);
+  background: linear-gradient(135deg, rgba(0,20,40,0.6) 0%, rgba(0,10,20,0.8) 100%);
+}
+.measure .label{
+  font-size:14px;
+  font-weight:600;
+  color:var(--muted);
+  text-shadow: none;
+  margin-bottom:8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.measure .value{
+  font-size:24px;
+  font-weight:700;
+  color:var(--energy-blue);
+  text-shadow: 0 0 20px var(--accent-glow);
+  font-family: 'Courier New', monospace;
+}
+
+/* Enhanced colored borders with glow 
+.courant{border-left:4px solid var(--danger); padding-left:12px;}
+.courant .value{color:var(--danger); text-shadow: 0 0 15px rgba(255,46,99,0.4);}
+
+.tension{border-left:4px solid var(--energy-blue); padding-left:12px;}
+.tension .value{color:var(--energy-blue); text-shadow: 0 0 15px rgba(0,242,254,0.4);}
+
+.puissance{border-left:4px solid var(--success); padding-left:12px;}
+.puissance .value{color:var(--success); text-shadow: 0 0 15px rgba(0,245,160,0.4);}
+
+.lumiere{border-left:4px solid var(--warning); padding-left:12px;}
+.lumiere .value{color:var(--warning); text-shadow: 0 0 15px rgba(255,189,105,0.4);}
+
+.energie{border-left:4px solid var(--energy-purple); padding-left:12px;}
+.energie .value{color:var(--energy-purple); text-shadow: 0 0 15px rgba(157,80,255,0.4);}
+*/
+/* ENHANCED WEATHER CARD */
+#weatherCard{
+  background: linear-gradient(135deg, var(--glass) 0%, var(--panel) 100%);
+  padding:20px;
+  border-radius:16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  cursor:pointer;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  overflow: hidden;
+}
+#weatherCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--energy-green), var(--energy-blue));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+#weatherCard:hover::before {
+  transform: scaleX(1);
+}
+#weatherCard:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+#weatherCard .weatherLabel{
+  font-size:18px;
+  font-weight:600;
+  color:var(--muted);
+  margin-bottom:10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+#weatherCard .weatherValue{
+  font-size:24px;
+  font-weight:700;
+  color:var(--energy-blue);
+  text-shadow: 0 0 15px var(--accent-glow);
+}
+
+/* ENHANCED THRESHOLD CARD */
+#thresholdCard {
+  background: linear-gradient(135deg, var(--glass) 0%, var(--panel) 100%);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+#thresholdCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--energy-blue);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+#thresholdCard:hover::before {
+  transform: scaleX(1);
+}
+#thresholdCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+#thresholdCard label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--energy-blue);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+#nominalPower {
+  padding: 12px 16px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0,242,254,0.3);
+  outline: none;
+  background: rgba(10,21,37,0.8);
+  color: var(--text);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+#nominalPower:focus {
+  border-color: var(--energy-blue);
+  box-shadow: 0 0 20px rgba(0,242,254,0.4);
+  background: rgba(10,21,37,0.9);
+}
+
+/* ENHANCED CHART CARD */
+#chartCard{
+  margin-top:10px;
+  background: linear-gradient(135deg, var(--panel) 0%, var(--deep-space) 100%);
+  padding:25px;
+  border-radius:16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  height:380px;
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* ENHANCED CHATBOX */
+#chatbox{
+  background: linear-gradient(135deg, var(--panel) 0%, var(--deep-space) 100%);
+  padding:20px;
+  border-radius:16px;
+  display:flex;
+  flex-direction:column;
+  height:400px;
+  font-size:16px;
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+#chatMessages{flex:1;overflow:auto;padding-right:10px;display:flex;flex-direction:column;gap:15px;}
+.chatMsg{
+  padding:12px 16px;
+  border-radius:12px;
+  max-width:86%; 
+  font-size:16px; 
+  color:var(--text);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.chatBot{
+  background: linear-gradient(135deg, rgba(0,242,254,0.2) 0%, rgba(0,245,160,0.1) 100%);
+  align-self:flex-start;
+  border-left: 3px solid var(--energy-blue);
+}
+.chatUser{
+  background: linear-gradient(135deg, rgba(157,80,255,0.2) 0%, rgba(255,46,99,0.1) 100%);
+  align-self:flex-end;
+  border-right: 3px solid var(--energy-purple);
+}
+#chatInput{display:flex;gap:10px;margin-top:15px;}
+#chatInput input{
+  flex:1;
+  padding:12px 16px;
+  border-radius:10px;
+  border:1px solid rgba(0,242,254,0.3);
+  background:rgba(10,21,37,0.8);
+  color:var(--text);
+  font-size:16px;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+#chatInput input:focus {
+  border-color: var(--energy-blue);
+  box-shadow: 0 0 15px rgba(0,242,254,0.3);
+}
+#sendBtn{
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, var(--energy-blue) 0%, var(--energy-green) 100%);
+  color: var(--deep-space);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.3);
+}
+#sendBtn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,242,254,0.4);
+  background: linear-gradient(135deg, var(--energy-green) 0%, var(--energy-blue) 100%);
+}
+#sendBtn:active{
+  transform: translateY(0px);
+}

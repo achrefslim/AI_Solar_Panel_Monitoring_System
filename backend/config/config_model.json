@@ -1,0 +1,120 @@
+{
+  "features_ordre": [
+    "Elevation",
+    "Temperature",
+    "Humidity",
+    "Solar_Irradiance",
+    "Cloud_Cover",
+    "Wind_Speed",
+    "Solar_Irradiance_smooth",
+    "Solar_Production_smooth",
+    "Efficiency_Corrected",
+    "YEAR",
+    "MONTH",
+    "DAY",
+    "HOUR",
+    "DAYOFWEEK",
+    "Temp_x_Irradiance",
+    "Solar_Prod_Lag1"
+  ],
+  "target_name": "Solar_Production_Estimated",
+  "model_type": "<class 'sklearn.ensemble._forest.RandomForestRegressor'>",
+  "features_details": {
+    "Elevation": {
+      "type": "int64",
+      "min": 0.0,
+      "max": 9.0,
+      "mean": 4.593969849246231
+    },
+    "Temperature": {
+      "type": "int64",
+      "min": 10.0,
+      "max": 39.0,
+      "mean": 24.699497487437185
+    },
+    "Humidity": {
+      "type": "int64",
+      "min": 30.0,
+      "max": 89.0,
+      "mean": 60.095477386934675
+    },
+    "Solar_Irradiance": {
+      "type": "int64",
+      "min": 100.0,
+      "max": 799.0,
+      "mean": 462.2673366834171
+    },
+    "Cloud_Cover": {
+      "type": "float64",
+      "min": 0.0018373596817871,
+      "max": 0.4994277021909404,
+      "mean": 0.2529717599783911
+    },
+    "Wind_Speed": {
+      "type": "float64",
+      "min": 1.0041255260125015,
+      "max": 9.999591842032626,
+      "mean": 5.412304031861566
+    },
+    "Solar_Irradiance_smooth": {
+      "type": "float64",
+      "min": 284.5,
+      "max": 653.9,
+      "mean": 463.13819294887134
+    },
+    "Solar_Production_smooth": {
+      "type": "float64",
+      "min": 292.1,
+      "max": 748.9,
+      "mean": 538.5283504825715
+    },
+    "Efficiency_Corrected": {
+      "type": "float64",
+      "min": 0.19677,
+      "max": 0.2241749999999999,
+      "mean": 0.21028397487437178
+    },
+    "YEAR": {
+      "type": "int32",
+      "min": null,
+      "max": null,
+      "mean": null
+    },
+    "MONTH": {
+      "type": "int32",
+      "min": null,
+      "max": null,
+      "mean": null
+    },
+    "DAY": {
+      "type": "int32",
+      "min": null,
+      "max": null,
+      "mean": null
+    },
+    "HOUR": {
+      "type": "int32",
+      "min": null,
+      "max": null,
+      "mean": null
+    },
+    "DAYOFWEEK": {
+      "type": "int32",
+      "min": null,
+      "max": null,
+      "mean": null
+    },
+    "Temp_x_Irradiance": {
+      "type": "int64",
+      "min": 1180.0,
+      "max": 30771.0,
+      "mean": 11480.653266331658
+    },
+    "Solar_Prod_Lag1": {
+      "type": "float64",
+      "min": 96.32817599999998,
+      "max": 233.142,
+      "mean": 155.92723295403687
+    }
+  }
+}

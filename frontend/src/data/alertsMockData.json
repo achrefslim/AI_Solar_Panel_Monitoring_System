@@ -1,0 +1,50 @@
+[
+    {
+      "severity": "critical",
+      "titles": [
+        "Inverter Overload",
+        "Grid Connection Lost",
+        "Battery Overheating",
+        "Critical Voltage Drop"
+      ],
+      descriptions: [
+        "Inverter operating at 120% capacity",
+        "Grid synchronization failed for 5+ minutes",
+        "Battery temperature exceeds safe limits",
+        "Voltage dropped below operational threshold"
+      ],
+      "sources": ["Inverter A", "Grid Controller", "Battery Bank", "Main Controller"]
+    },
+    {
+      "severity": "warning",
+      "titles": [
+        "Reduced Efficiency",
+        "Partial Shading Detected",
+        "Dust Accumulation",
+        "Voltage Fluctuation"
+      ],
+      descriptions: [
+        "System efficiency dropped by 15%",
+        "Partial shading affecting panel array B",
+        "Dust accumulation reducing output by 8%",
+        "Minor voltage fluctuations detected"
+      ],
+      "sources": ["Performance Monitor", "Panel Array B", "Weather System", "Grid Monitor"]
+    },
+    {
+      "severity": "info",
+      "titles": [
+        "Maintenance Due",
+        "Weather Alert",
+        "Performance Report",
+        "System Update Available"
+      ],
+      descriptions: [
+        "Scheduled maintenance due in 7 days",
+        "Cloudy conditions affecting production",
+        "Monthly performance report generated",
+        "New firmware update available"
+      ],
+      "sources": ["Scheduler", "Weather API", "Analytics", "Update System"]
+    }
+  ]

@@ -1,0 +1,45 @@
+#chartCard {
+  background: linear-gradient(135deg, rgba(0, 10, 20, 0.7) 0%, #0a1525 100%);
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#chartCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00f2fe, rgba(0, 242, 254, 0.4));
+  opacity: 0.7;
+}
+#chartCard canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.4));
+}
+
+@media (max-width: 900px) {
+  #chartCard {
+    padding: 18px;
+  }
+  #chartCard canvas {
+    height: 240px !important;
+  }
+}
+@media (max-width: 480px) {
+  #chartCard {
+    padding: 15px;
+  }
+  #chartCard canvas {
+    height: 200px !important;
+  }
+}
