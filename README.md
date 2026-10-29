@@ -6,9 +6,11 @@ Built for the **CASS TSYP13 Challenge**.
 
 ## Demo
 
-[![Watch the demo video](demo/prototype.jpg)](demo/demo.mp4)
+https://github.com/user-attachments/assets/6bb8fdf8-0718-4f42-a532-282f86f1a375
 
-**[Watch the demo video (34 seconds)](demo/demo.mp4)**
+If the player does not load, [open the demo video file](demo/demo.mp4).
+
+![Prototype](demo/prototype.jpg)
 
 | Dashboard | AI Solar Assistant |
 |:---:|:---:|
